@@ -1,4 +1,15 @@
-app.get('/tarefa', (req, res)=>{
-    res.send('Rota GET para entidade tarefa')
+const usuarioTarefa = (app)=>{
+    app.get('/tarefa', (req, res)=>{
+        res.json({
+            "tarefas": []
+        })
+    })
+}
+
+app.post('/tarefa',(req, res)=>{
+    res.json({
+
+    })
 })
 
+export default usuarioTarefa

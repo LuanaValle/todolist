@@ -1,7 +1,18 @@
 const usuarioController = (app)=>{
-    app.get('/usuariio', (req))
+    app.get('/usuario', (req, res)=>{
+        res.json({
+            // array com ususarios
+            "usuarios": []  
+        })
+    })
+    
+    app.post('/usuario',(req, res)=>{
+        /*alguma função que insira coisas*/
+        res.json({
+            "nome": "cinthia",
+            "msg": "oi T11"
+        })
+    })
 }
 
-app.get('/usuario', (req, res)=>{
-    res.send('Rota GET para entidade usuário')
-})
+export default usuarioController
